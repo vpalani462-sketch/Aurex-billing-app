@@ -2,24 +2,59 @@
 <html>
 <head>
 <title>Sri Kumaran Billing Software</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin: 20px;
+    background:#f2f2f2;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    max-width:500px;
+}
+
+input, button{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>Sri Kumaran Electrical Distributor</h1>
+<div class="box">
 
-<h2>Billing Software</h2>
+<h2>Sri Kumaran Electrical Distributor</h2>
+<h3>Billing Software</h3>
 
-<p>Product Name</p>
-<input type="text">
+<label>Customer Name</label>
+<input type="text" placeholder="Customer Name">
 
-<p>Quantity</p>
-<input type="number">
+<label>Product Name</label>
+<input type="text" placeholder="Product Name">
 
-<p>Price</p>
-<input type="number">
+<label>Quantity</label>
+<input type="number" placeholder="Quantity">
 
-<br><br>
+<label>Price</label>
+<input type="number" placeholder="Price">
+
 <button>Generate Bill</button>
+
+</div>
 
 </body>
 </html>
