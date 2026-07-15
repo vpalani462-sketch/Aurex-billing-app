@@ -24,4 +24,28 @@ Smart GST Billing &amp; Inventory Management App for Electrical Distribution Bus
 <button>Generate Bill</button>
 
 </body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>Sri Kumaran Billing Software</title>
+</head>
+<body>
+
+<h1>Sri Kumaran Electrical Distributor</h1>
+
+<h2>Billing Software</h2>
+
+<p>Product Name</p>
+<input type="text">
+
+<p>Quantity</p>
+<input type="number">
+
+<p>Price</p>
+<input type="number">
+
+<br><br>
+<button>Generate Bill</button>
+
+</body>
 </html>
