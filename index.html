@@ -94,7 +94,7 @@ td,th{
 <p class="total">
 Total : ₹ <span id="total">0</span>
 </p>
-
+<button onclick="generateBill()">Generate Bill</button>
 <button onclick="window.print()">Print Bill</button>
 
 </div>
@@ -127,3 +127,6 @@ document.getElementById("total").innerHTML=total;
 
 </body>
 </html>
+function generateBill(){
+alert("Bill Generated Successfully!");
+}
