@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billing - Sri Kumaran Agencies</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header class="header">
+<h1>SRI KUMARAN AGENCIES</h1>
+<p>GST Billing System</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>New Invoice</h2>
+
+<label>Invoice No</label>
+<input type="text" value="INV-000001" readonly>
+
+<label>Customer Name</label>
+<input type="text" placeholder="Enter Customer Name">
+
+<label>Mobile Number</label>
+<input type="text" placeholder="Enter Mobile Number">
+
+<label>Product Name</label>
+<input type="text" placeholder="Enter Product Name">
+
+<label>Quantity</label>
+<input type="number">
+
+<label>Rate</label>
+<input type="number">
+
+<button>Add Product</button>
+
+<br><br>
+
+<button>Generate Bill</button>
+
+<button onclick="window.print()">Print Bill</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
