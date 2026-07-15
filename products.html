@@ -1,40 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Products - Sri Kumaran Agencies</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
-<body>
+<input type="text" id="productName" placeholder="Product Name">
 
-<header class="header">
-<h1>SRI KUMARAN AGENCIES</h1>
-<p>Product Management</p>
-</header>
+<input type="text" id="hsn" placeholder="HSN Code">
 
-<div class="container">
+<input type="number" id="purchase" placeholder="Purchase Price">
 
-<div class="card">
+<input type="number" id="selling" placeholder="Selling Price">
 
-<h2>Add Product</h2>
+<input type="number" id="stock" placeholder="Stock Quantity">
 
-<input type="text" placeholder="Product Name">
+<button onclick="saveProduct()">Save Product</button>
 
-<input type="text" placeholder="HSN Code">
+<h3>Product List</h3>
 
-<input type="number" placeholder="Purchase Price">
-
-<input type="number" placeholder="Selling Price">
-
-<input type="number" placeholder="Stock Quantity">
-
-<button>Save Product</button>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<div id="productList"></div>
