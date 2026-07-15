@@ -120,4 +120,8 @@ function generateBill(){
 
 alert("Bill Generated Successfully!");
 
+}function generateBill(){
+
+alert("Bill Generated Successfully!");
+
 }
