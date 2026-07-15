@@ -70,3 +70,49 @@ ${c.name} - ${c.mobile}
 }
 
 showCustomers();
+function saveProduct(){
+
+let product = {
+name: document.getElementById("productName").value,
+hsn: document.getElementById("hsn").value,
+purchase: document.getElementById("purchase").value,
+selling: document.getElementById("selling").value,
+stock: document.getElementById("stock").value
+};
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+products.push(product);
+
+localStorage.setItem("products", JSON.stringify(products));
+
+alert("Product Saved");
+
+showProducts();
+
+}
+
+
+function showProducts(){
+
+let list = document.getElementById("productList");
+
+if(!list) return;
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+list.innerHTML="";
+
+products.forEach(p=>{
+
+list.innerHTML += `
+<p>
+${p.name} - ₹${p.selling} - Stock: ${p.stock}
+</p>
+`;
+
+});
+
+}
+
+showProducts();
