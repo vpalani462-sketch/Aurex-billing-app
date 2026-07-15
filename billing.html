@@ -28,28 +28,25 @@
 <label>Mobile Number</label>
 <input type="text" placeholder="Enter Mobile Number">
 
+
 <label>Product Name</label>
-<input type="text" placeholder="Enter Product Name">
+<input type="text" id="productName" placeholder="Enter Product Name">
 
 <label>Quantity</label>
-<input type="number">
+<input type="number" id="qty">
 
 <label>Rate</label>
-<input type="number">
+<input type="number" id="rate">
 
-<button>Add Product</button>
+<button onclick="addProduct()">Add Product</button>
 
-<br><br>
+<table border="1" width="100%" id="billTable">
+<tr>
+<th>Product</th>
+<th>Qty</th>
+<th>Rate</th>
+<th>Total</th>
+</tr>
+</table>
 
-<button>Generate Bill</button>
-
-<button onclick="window.print()">Print Bill</button>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<h3>Total Amount: ₹ <span id="grandTotal">0</span></h3>
