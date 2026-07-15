@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sri Kumaran Billing Software</title>
+<title>Aurex Billing App</title>
 
 <style>
 body{
     font-family: Arial;
-    margin: 20px;
-    background:#f2f2f2;
+    background:#f2f5f3;
+    padding:20px;
 }
 
-.box{
+.container{
+    max-width:600px;
+    margin:auto;
     background:white;
     padding:20px;
     border-radius:10px;
-    max-width:500px;
+}
+
+h1{
+    text-align:center;
+    color:green;
 }
 
 input, button{
     width:100%;
     padding:10px;
-    margin:8px 0;
+    margin:5px 0;
 }
 
 button{
@@ -29,32 +35,95 @@ button{
     border:none;
     cursor:pointer;
 }
+
+table{
+    width:100%;
+    margin-top:15px;
+    border-collapse:collapse;
+}
+
+td,th{
+    border:1px solid #ccc;
+    padding:8px;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
+<h1>AUREX</h1>
 <h2>Sri Kumaran Electrical Distributor</h2>
-<h3>Billing Software</h3>
+
+<hr>
 
 <label>Customer Name</label>
-<input type="text" placeholder="Customer Name">
+<input type="text" placeholder="Enter customer name">
 
 <label>Product Name</label>
-<input type="text" placeholder="Product Name">
+<input type="text" id="product">
 
 <label>Quantity</label>
-<input type="number" placeholder="Quantity">
+<input type="number" id="qty">
 
 <label>Price</label>
-<input type="number" placeholder="Price">
+<input type="number" id="price">
 
-<button>Generate Bill</button>
+<button onclick="addProduct()">Add Product</button>
+
+<table>
+<tr>
+<th>Product</th>
+<th>Qty</th>
+<th>Amount</th>
+</tr>
+
+<tbody id="list">
+
+</tbody>
+
+</table>
+
+<p class="total">
+Total : ₹ <span id="total">0</span>
+</p>
+
+<button onclick="window.print()">Print Bill</button>
 
 </div>
+
+
+<script>
+
+let total=0;
+
+function addProduct(){
+
+let product=document.getElementById("product").value;
+let qty=document.getElementById("qty").value;
+let price=document.getElementById("price").value;
+
+let amount=qty*price;
+
+total=total+amount;
+
+let row="<tr><td>"+product+"</td><td>"+qty+"</td><td>₹"+amount+"</td></tr>";
+
+document.getElementById("list").innerHTML+=row;
+
+document.getElementById("total").innerHTML=total;
+
+}
+
+</script>
+
 
 </body>
 </html>
