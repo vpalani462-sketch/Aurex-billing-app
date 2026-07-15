@@ -116,3 +116,8 @@ ${p.name} - ₹${p.selling} - Stock: ${p.stock}
 }
 
 showProducts();
+function generateBill(){
+
+alert("Bill Generated Successfully!");
+
+}
